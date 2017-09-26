@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D28D357D1F74107F0019EB43 /* ramps.scn in Resources */ = {isa = PBXBuildFile; fileRef = D28D357C1F74107F0019EB43 /* ramps.scn */; };
+		D28D35801F7420110019EB43 /* Ramp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D357F1F7420110019EB43 /* Ramp.swift */; };
+		D28D35821F74229F0019EB43 /* main.scn in Resources */ = {isa = PBXBuildFile; fileRef = D28D35811F74229F0019EB43 /* main.scn */; };
 		D2FF4FBE1F73EE9F00934BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4FBD1F73EE9F00934BB7 /* AppDelegate.swift */; };
 		D2FF4FC01F73EE9F00934BB7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FF4FBF1F73EE9F00934BB7 /* art.scnassets */; };
-		D2FF4FC21F73EE9F00934BB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4FC11F73EE9F00934BB7 /* ViewController.swift */; };
+		D2FF4FC21F73EE9F00934BB7 /* RampPlacerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4FC11F73EE9F00934BB7 /* RampPlacerVC.swift */; };
 		D2FF4FC51F73EE9F00934BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FF4FC31F73EE9F00934BB7 /* Main.storyboard */; };
 		D2FF4FC71F73EE9F00934BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FF4FC61F73EE9F00934BB7 /* Assets.xcassets */; };
 		D2FF4FCA1F73EE9F00934BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FF4FC81F73EE9F00934BB7 /* LaunchScreen.storyboard */; };
+		D2FF4FD31F74077800934BB7 /* RampPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4FD21F74077800934BB7 /* RampPickerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D28D357C1F74107F0019EB43 /* ramps.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = ramps.scn; path = art.scnassets/ramps.scn; sourceTree = "<group>"; };
+		D28D357F1F7420110019EB43 /* Ramp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramp.swift; sourceTree = "<group>"; };
+		D28D35811F74229F0019EB43 /* main.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = main.scn; path = art.scnassets/main.scn; sourceTree = "<group>"; };
 		D2FF4FBA1F73EE9F00934BB7 /* rampa-base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rampa-base.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF4FBD1F73EE9F00934BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2FF4FBF1F73EE9F00934BB7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		D2FF4FC11F73EE9F00934BB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2FF4FC11F73EE9F00934BB7 /* RampPlacerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPlacerVC.swift; sourceTree = "<group>"; };
 		D2FF4FC41F73EE9F00934BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2FF4FC61F73EE9F00934BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2FF4FC91F73EE9F00934BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2FF4FCB1F73EE9F00934BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2FF4FD21F74077800934BB7 /* RampPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPickerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D28D357E1F7420070019EB43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D28D357F1F7420110019EB43 /* Ramp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D2FF4FB11F73EE9F00934BB7 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +72,27 @@
 		D2FF4FBC1F73EE9F00934BB7 /* rampa-base */ = {
 			isa = PBXGroup;
 			children = (
+				D28D357E1F7420070019EB43 /* Model */,
+				D2FF4FD11F73FE6000934BB7 /* Controller */,
 				D2FF4FBD1F73EE9F00934BB7 /* AppDelegate.swift */,
 				D2FF4FBF1F73EE9F00934BB7 /* art.scnassets */,
-				D2FF4FC11F73EE9F00934BB7 /* ViewController.swift */,
 				D2FF4FC31F73EE9F00934BB7 /* Main.storyboard */,
 				D2FF4FC61F73EE9F00934BB7 /* Assets.xcassets */,
 				D2FF4FC81F73EE9F00934BB7 /* LaunchScreen.storyboard */,
 				D2FF4FCB1F73EE9F00934BB7 /* Info.plist */,
+				D28D357C1F74107F0019EB43 /* ramps.scn */,
+				D28D35811F74229F0019EB43 /* main.scn */,
 			);
 			path = "rampa-base";
+			sourceTree = "<group>";
+		};
+		D2FF4FD11F73FE6000934BB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D2FF4FC11F73EE9F00934BB7 /* RampPlacerVC.swift */,
+				D2FF4FD21F74077800934BB7 /* RampPickerVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +158,8 @@
 				D2FF4FCA1F73EE9F00934BB7 /* LaunchScreen.storyboard in Resources */,
 				D2FF4FC71F73EE9F00934BB7 /* Assets.xcassets in Resources */,
 				D2FF4FC51F73EE9F00934BB7 /* Main.storyboard in Resources */,
+				D28D357D1F74107F0019EB43 /* ramps.scn in Resources */,
+				D28D35821F74229F0019EB43 /* main.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2FF4FC21F73EE9F00934BB7 /* ViewController.swift in Sources */,
+				D2FF4FC21F73EE9F00934BB7 /* RampPlacerVC.swift in Sources */,
+				D28D35801F7420110019EB43 /* Ramp.swift in Sources */,
+				D2FF4FD31F74077800934BB7 /* RampPickerVC.swift in Sources */,
 				D2FF4FBE1F73EE9F00934BB7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

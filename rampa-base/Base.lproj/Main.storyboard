@@ -1,27 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ramp PlacerVC-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                <viewController id="BV1-FR-VrT" customClass="RampPlacerVC" customModule="rampa_base" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TI7-XU-bZW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-dH-IJU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpJ-N9-xzE">
+                                <rect key="frame" x="258" y="586" width="107" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="L6s-ah-5Qf"/>
+                                    <constraint firstAttribute="height" constant="71" id="VlF-6G-amA"/>
+                                </constraints>
+                                <state key="normal" image="rampIcon"/>
+                                <connections>
+                                    <action selector="onRampBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="h0a-H3-mb3"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-re-XMA">
+                                <rect key="frame" x="10" y="616" width="200" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSy-dU-sT7">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="2D3-Vm-mOT"/>
+                                            <constraint firstAttribute="width" constant="41" id="Xbb-J6-gT5"/>
+                                        </constraints>
+                                        <state key="normal" image="removeButton"/>
+                                        <connections>
+                                            <action selector="onRemovePressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ETt-zM-H4N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLI-Od-tlm">
+                                        <rect key="frame" x="53" y="0.0" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="9LQ-lr-vI4"/>
+                                            <constraint firstAttribute="width" constant="41" id="oWP-eT-Rxf"/>
+                                        </constraints>
+                                        <state key="normal" image="rotateButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-7R-SUG">
+                                        <rect key="frame" x="106" y="0.0" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="Hx7-dD-cuO"/>
+                                            <constraint firstAttribute="height" constant="41" id="abu-l2-80T"/>
+                                        </constraints>
+                                        <state key="normal" image="upArrow"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-AH-KLh">
+                                        <rect key="frame" x="159" y="0.0" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="gp5-Br-Haj"/>
+                                            <constraint firstAttribute="height" constant="41" id="sa2-ix-r2w"/>
+                                        </constraints>
+                                        <state key="normal" image="downArrow"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fvs-Mi-qFt" firstAttribute="trailing" secondItem="EpJ-N9-xzE" secondAttribute="trailing" constant="10" id="61y-5R-D3l"/>
+                            <constraint firstItem="h3t-dH-IJU" firstAttribute="bottom" secondItem="fvs-Mi-qFt" secondAttribute="bottom" id="6Oi-cJ-Cpa"/>
+                            <constraint firstItem="fvs-Mi-qFt" firstAttribute="bottom" secondItem="cnf-re-XMA" secondAttribute="bottom" constant="10" id="9qg-in-1ET"/>
+                            <constraint firstItem="h3t-dH-IJU" firstAttribute="leading" secondItem="fvs-Mi-qFt" secondAttribute="leading" id="Tvo-Jg-iOG"/>
+                            <constraint firstItem="fvs-Mi-qFt" firstAttribute="bottom" secondItem="EpJ-N9-xzE" secondAttribute="bottom" constant="10" id="d1s-St-XtI"/>
+                            <constraint firstItem="h3t-dH-IJU" firstAttribute="trailing" secondItem="fvs-Mi-qFt" secondAttribute="trailing" id="peB-V4-2VW"/>
+                            <constraint firstItem="h3t-dH-IJU" firstAttribute="top" secondItem="TI7-XU-bZW" secondAttribute="top" id="v3W-n7-aU0"/>
+                            <constraint firstItem="cnf-re-XMA" firstAttribute="leading" secondItem="fvs-Mi-qFt" secondAttribute="leading" constant="10" id="vNr-Ee-yaq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fvs-Mi-qFt"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="controls" destination="cnf-re-XMA" id="rbJ-lx-uvn"/>
+                        <outlet property="downBtn" destination="u2K-AH-KLh" id="sFJ-Bn-uNe"/>
+                        <outlet property="rotateBtn" destination="WLI-Od-tlm" id="s7O-e0-Bqm"/>
+                        <outlet property="sceneView" destination="h3t-dH-IJU" id="PJ8-xr-bwK"/>
+                        <outlet property="upBtn" destination="ghn-7R-SUG" id="Gvv-FF-xBF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="downArrow" width="32" height="32"/>
+        <image name="rampIcon" width="107" height="71"/>
+        <image name="removeButton" width="32" height="32"/>
+        <image name="rotateButton" width="32" height="32"/>
+        <image name="upArrow" width="32" height="32"/>
+    </resources>
 </document>
